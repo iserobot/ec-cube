@@ -1,5 +1,6 @@
 order deny,allow
 allow from all
+SetEnvIf X-Forwarded-Proto ^https$ HTTPS=on
 <IfModule mod_rewrite.c>
     #403 Forbidden対応方法
     #ページアクセスできない時シンボリックリンクが有効になっていない可能性あります、
